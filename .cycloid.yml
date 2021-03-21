@@ -1,7 +1,7 @@
 ---
 # Configuration of the Cycloid stack
 version: '2'
-name: 'stack-notes-aws'
+name: 'Notes Demo App'
 canonical: 'stack-notes-aws'
 keywords:
   - 'ec2'
