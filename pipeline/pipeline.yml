@@ -101,6 +101,12 @@ resources:
     uri: ((api_git_repository))
     branch: ((api_git_branch))
 
+- name: git_front
+  type: git
+  source:
+    uri: ((front_git_repository))
+    branch: ((front_git_branch))
+
 
 jobs:
   - name: terraform-plan
