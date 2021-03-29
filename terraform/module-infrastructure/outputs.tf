@@ -26,3 +26,17 @@ output "zones" {
   value = local.aws_availability_zones
 }
 
+#
+# VPC
+#
+output "vpc_id" {
+  value = module.vpc.vpc_id
+}
+
+output "vpc_nat_public_ips" {
+  value = module.vpc.nat_public_ips
+}
+
+output "bastion_vpc_sg_ids" {
+  value = element(aws_security_group.allow_bastion2vpc.*.id, 0)
+}

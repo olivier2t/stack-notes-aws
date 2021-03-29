@@ -97,9 +97,11 @@ module "infrastructure" {
 
   #. bastion_allowed_networks: 0.0.0.0/0
   #+ Networks allowed to connect to the bastion using SSH
+  bastion_allowed_networks = "0.0.0.0/0"
 
   #. bastion_instance_type: t3.micro
   #+ Instance type for the bastion
+  bastion_instance_type = "t3.micro"
 
   #. backup_bucket_prefix: ""
   #+ Prefix for the S3 backup bucket (change it if a bucket with the same name already exists) - defaults to '${var.customer}-'

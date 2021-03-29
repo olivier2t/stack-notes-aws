@@ -82,18 +82,18 @@ resources:
   type: git
   icon: github-circle
   source:
-    uri: ((olivier2t-cycloid_git_repository))
+    uri: ((stack_git_repository))
     branch: ((stack_git_branch))
-    path: notes-ec2/terraform/*
+    path: terraform/*
 
 - name: git_config-terraform
   type: git
   icon: github-circle
   source:
-    uri: ((olivier2t-cycloid_git_repository))
+    uri: ((config_git_repository))
     branch: ((config_git_branch))
     private_key: ((config_git_private_key))
-    path: notes-ec2/terraform/*
+    path: ((config_terraform_path))
 
 - name: git_api
   type: git

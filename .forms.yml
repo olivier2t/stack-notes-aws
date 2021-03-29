@@ -29,12 +29,6 @@ default:
         default: ($ organization_canonical $)-terraform-remote-state
 
     Ansible:
-      - name: "Cassandra admin password"
-        description: "Password used for cassandra admin user."
-        key: cassandra_admin_password
-        widget: simple_text
-        type: string
-        default: ((custom_cassandra_admin_password))
       - name: "Ansible vault password"
         description: "Password used by ansible vault to decrypt your vaulted files."
         key: ansible_vault_password
@@ -60,7 +54,14 @@ default:
         type: string
         widget: cy_crs
         description: "Git repository URL containing the config of the stack."
-        default: "git@github.com:MyUser/config-magento.git"
+        default: "git@github.com:MyUser/config.git"
+        required: true
+      - name: "Config branch"
+        description: "Branch of the config Git repository."
+        key: config_git_branch
+        type: string
+        widget: cy_branch
+        default: "config"
         required: true
       - name: "Config git key"
         description: "SSH key pair to fetch the config Git repository."
@@ -68,15 +69,6 @@ default:
         type: string
         widget: cy_cred
         default: "((ssh_config.ssh_key))"
-        required: true
-      - name: "Config branch"
-        description: "Branch of the config Git repository."
-        key: config_git_branch
-        widget: cy_branch
-        type: string
-        description: "The branch used by the config repository"
-        source: config_git_repository
-        default: "config"
         required: true
 
       - name: "API git URL"
@@ -117,7 +109,7 @@ default:
         key: stack_git_branch
         widget: simple_text
         type: string
-        default: master
+        default: main
       - name: "Ansible version"
         description: "Ansible version used in packer and cycloid-toolkit ansible runner."
         key: ansible_version
