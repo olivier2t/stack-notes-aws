@@ -56,7 +56,7 @@ bastion_private_key_pair: ((ssh_bastion.ssh_key))
 
 #. config_git_repository (required): git@github.com:MyUser/config.git
 #+ Git repository URL containing your configs.
-config_git_repository: git@github.com:MyUser/config.git
+config_git_repository: git@github.com:olivier2t/config.git
 
 #. config_git_branch (required): master
 #+ Branch of the config Git repository.
