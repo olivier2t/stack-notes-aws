@@ -21,6 +21,8 @@
 }
 
 "resource" "aws_vpc" "myvpc" {
+  "cidr_block" = "0.0.0.0/0"
+
   "tags" = {
     "cycloid.io" = "true"
 
