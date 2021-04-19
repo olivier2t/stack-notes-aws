@@ -1,0 +1,9 @@
+module "tf-mystack" {
+  source = "module-mystack"
+
+  # env - type: string
+  # env = "[PLACEHOLDER]"
+
+  # project - type: string
+  # project = "[PLACEHOLDER]"
+}
