@@ -13,6 +13,10 @@
 }
 
 "resource" "aws_instance" "front" {
+  "ami" = "111"
+
+  "instance_type" = "t2.micro"
+
   "tags" = {
     "cycloid.io" = "true"
 
@@ -21,7 +25,7 @@
 }
 
 "resource" "aws_vpc" "myvpc" {
-  "cidr_block" = "0.0.0.0/0"
+  "cidr_block" = "192.168.1.0/24"
 
   "tags" = {
     "cycloid.io" = "true"
