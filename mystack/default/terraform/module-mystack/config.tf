@@ -12,6 +12,22 @@
   "region" = "eu-west-1"
 }
 
+"resource" "aws_instance" "front" {
+  "tags" = {
+    "cycloid.io" = "true"
+
+    "env" = "${var.env}"
+  }
+}
+
+"resource" "aws_vpc" "myvpc" {
+  "tags" = {
+    "cycloid.io" = "true"
+
+    "env" = "${var.env}"
+  }
+}
+
 "variable" "env" {
   "default" = "[PLACEHOLDER]"
 
