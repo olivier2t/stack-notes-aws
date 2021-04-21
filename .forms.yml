@@ -61,7 +61,7 @@ default:
         key: config_git_branch
         type: string
         widget: cy_branch
-        default: "config"
+        default: "main"
         required: true
       - name: "Config git key"
         description: "SSH key pair to fetch the config Git repository."
