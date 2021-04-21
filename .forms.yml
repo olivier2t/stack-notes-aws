@@ -60,6 +60,7 @@ default:
         description: "Branch of the config Git repository."
         key: config_git_branch
         type: string
+        source: config_git_repository
         widget: cy_branch
         default: "main"
         required: true

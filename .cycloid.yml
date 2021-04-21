@@ -22,6 +22,7 @@ config:
   default:
     name: 'Default deployment'
     description: 'This pipeline will deploy a demo application'
+    cloud_provider: 'aws'
 
     # Configuration of the CI pipeline
     pipeline:
