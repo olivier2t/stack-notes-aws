@@ -1,0 +1,28 @@
+version: "2"
+name: myStack
+canonical: mystack
+author: Olivier de Turckheim
+status: private
+description: A new stack
+image: ""
+keywords:
+- notes
+- provider:aws
+technologies:
+- technology: stackcraft
+  version: "1"
+dependencies: []
+config:
+  default:
+    description: ""
+    name: default
+    pipeline:
+      pipeline:
+        path: default/pipeline/terraform-pipeline.yaml
+      variables:
+        destination: ($ project $)/pipeline/variables-($ environment $).yml
+        path: default/pipeline/variables.sample.yaml
+    terraform:
+      mystack:
+        destination: ($ project $)/default/terraform/($ environment $)/mystack.tf
+        path: default/terraform/mystack.tf.sample
